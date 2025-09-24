@@ -42,13 +42,15 @@ a,
   position: fixed;
   top: 0;
   left: 0;
-  width: 24px;
-  height: 24px;
+  width: 164px;
+  height: 164px;
   pointer-events: none;
   z-index: 1000;
   transform: translate(-50%, -50%);
   mix-blend-mode: difference; /* color invert */
-  will-change: transform, scale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .peak-cursor div {
   transition: all 0.15s ease-out;

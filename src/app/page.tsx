@@ -82,7 +82,13 @@ export default function Home() {
           ease: "power3.out",
         },
         "-=0.5"
-      );
+      )
+      .to("[data-geo-shape]", {
+        rotation: 360,
+        repeat: -1,
+        ease: "none",
+        transformOrigin: "center",
+      });
   }, []);
 
   useEffect(() => {
@@ -261,6 +267,7 @@ export default function Home() {
   return (
     <main className="relative font-sans text-neutral-900 bg-white">
       <div ref={cursorRef} className="peak-cursor" aria-hidden>
+        <div className="absolute inset-0 border-1 border-[var(--brand-blue)] rounded-full"></div>
         <svg viewBox="0 0 331.12 408.64" className="w-8 h-8">
           <path
             fill="var(--brand-blue)"
@@ -340,7 +347,7 @@ export default function Home() {
           />
           <div
             data-geo-shape
-            className="absolute top-1/2 right-1/3 w-48 h-8 bg-[var(--brand-blue)]"
+            className="absolute top-28 right-1/3 w-48 h-8 bg-[var(--brand-blue)]"
           />
         </div>
 
@@ -352,11 +359,11 @@ export default function Home() {
           />
           <div
             data-brutalist-line
-            className="absolute top-1/4 left-0 w-3/4 h-1 bg-[var(--brand-blue)]"
+            className="absolute top-[23%] left-0 w-3/4 h-1 bg-[var(--brand-blue)]"
           />
           <div
             data-brutalist-line
-            className="absolute bottom-1/3 left-1/4 w-1/2 h-1 bg-black"
+            className="absolute top-2/5 left-0 w-3/4 h-1 bg-black"
           />
           <div
             data-brutalist-line
@@ -368,20 +375,20 @@ export default function Home() {
         <div className="absolute top-8 left-8 lg:top-16 lg:left-16">
           <h1
             data-hero-title
-            className="text-[12vw] lg:text-[15vw] font-black leading-[0.8] tracking-tight text-black select-none uppercase"
+            className="text-[12vw] lg:text-[10vw] font-black leading-[0.8] tracking-tight text-black select-none uppercase"
             style={{ fontFamily: "Arial Black, Arial, sans-serif" }}
           >
             PEAK
             <br />
-            <span className="text-[var(--brand-blue)]">SOLUTIONS</span>
+            <span className="text-[var(--brand-blue)]">solutions</span>
           </h1>
         </div>
 
         {/* motto */}
-        <div className="absolute bottom-16 right-8 lg:bottom-24 lg:right-16 max-w-md">
+        <div className="absolute bottom-16 right-8 lg:bottom-24 lg:right-16 max-w-4xl text-right">
           <p
             data-hero-motto
-            className="text-lg lg:text-xl font-bold uppercase tracking-wide text-black leading-tight"
+            className="text-lg lg:text-6xl font-bold uppercase tracking-wide text-black leading-tight"
           >
             SOARING NEW HEIGHTS, REACHING THE SUMMIT OF INNOVATION
           </p>
@@ -393,8 +400,8 @@ export default function Home() {
         className="h-screen flex flex-col px-8 pt-40 pb-12 bg-white relative overflow-hidden"
       >
         <div className="flex items-end gap-8 mb-10">
-          <h2 className="text-[14vw] leading-none font-black uppercase text-black">
-            TEAM
+          <h2 className="text-6xl lg:text-8xl leading-none font-black text-black">
+            meet the team.
           </h2>
           <div className="flex-1 h-2 bg-[var(--brand-blue)]" />
         </div>
@@ -446,8 +453,8 @@ export default function Home() {
       >
         {/* header*/}
         <div className="mb-16">
-          <h2 className="text-6xl lg:text-8xl font-black uppercase text-white mb-4">
-            PROJECTS
+          <h2 className="text-6xl lg:text-8xl font-black text-white mb-4">
+            what we've done.
           </h2>
           <div className="w-32 h-2 bg-[var(--brand-blue)]" />
         </div>
